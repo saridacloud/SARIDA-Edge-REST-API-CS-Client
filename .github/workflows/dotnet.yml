@@ -26,6 +26,8 @@ jobs:
     - name: Build
       run: cmd.exe /c 'build.bat'
     - name: Pack to NuGet
-      run: nuget pack -Build -OutputDirectory out 'src/IO.Swagger/IO.Swagger.csproj'
+      run: dotnet pack 'src/IO.Swagger/IO.Swagger.csproj' -o 'out-nuget'
+#    - name: Pack to NuGet
+#      run: nuget pack -Build -OutputDirectory out 'src/IO.Swagger/IO.Swagger.csproj'
       
 
